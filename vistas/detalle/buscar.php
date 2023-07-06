@@ -2,7 +2,7 @@
 include_once '../../includes/header.php';
 include_once '../../includes/navbar.php';
 
-require '../../modelos/sanciones.php';
+require '../../modelos/aplicaciones.php';
 require '../../modelos/Asignar.php';
 require '../../modelos/problemas_reportados.php';
 
@@ -10,7 +10,7 @@ require '../../modelos/problemas_reportados.php';
 //var_dump($_REQUEST);
 try {
     $san_id = $_REQUEST['pro_id'] ?? null;
-    $san = new sanciones(['san_id' => $san_id]);
+    $san = new aplicaciones(['san_id' => $san_id]);
     //var_dump($san);
     $sans = $san->buscarsan();
   

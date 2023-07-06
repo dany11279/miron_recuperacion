@@ -2,7 +2,7 @@
 require '../../modelos/problemas_reportados.php';
 
 
-$tar_id = $_POST['tar_app'];
+$tar_id = $_POST['pro_san'];
 
 if ($_POST != '') {
     try {

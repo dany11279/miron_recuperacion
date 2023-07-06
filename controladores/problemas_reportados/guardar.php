@@ -5,7 +5,7 @@ require '../../modelos/problemas_reportados.php';
 if ($_POST != '') {
     try {
     
-        $fechaPost = $_POST['tar_fecha'];
+        $fechaPost = $_POST['pro_fecha'];
         $fechaObjeto = date_create($fechaPost);
         $fechaFormateada = date_format($fechaObjeto, 'm/d/Y'); 
         $datosproblemas_reportados = $_POST;

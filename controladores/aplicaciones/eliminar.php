@@ -1,30 +1,16 @@
 <?php
-require '../../modelos/sanciones.php';
+require '../../modelos/aplicaciones.php';
 
-if($_POST['app_nombre'] != '' ){
-
-
-    try {
-        $sanciones = new sanciones($_POST);
-
-        $resultado = $sanciones->modificar();
-
-    } catch (PDOException $e) {
-        $error = $e->getMessage();
-    } catch (Exception $e2){
-        $error = $e2->getMessage();
-    }
-}else{
-    $error = "Debe llenar todos los datos";
+try {
+    $aplicaciones = new aplicaciones($_GET);
+    $resultado = $aplicaciones->eliminar();
+} catch (PDOException $e) {
+    $error = $e->getMessage();
+} catch (Exception $e2){
+    $error = $e2->getMessage();
 }
-
-// if($resultado){
-//     echo "Guardado exitosamente";
-// }else{
-//     echo "Ocurrió un error: $error";
-// }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,20 +25,19 @@ if($_POST['app_nombre'] != '' ){
         <div class="row">
             <div class="col-lg-6">
                 <?php if($resultado): ?>
-                    <div class="alert alert-success" role="alert">
-                        Modificado exitosamente!
+                    <div class="alert alert-danger" role="alert">
+                        Eliminado exitosamente!
                     </div>
                 <?php else :?>
                     <div class="alert alert-danger" role="alert">
                         Ocurrió un error: <?= $error ?>
                     </div>
                 <?php endif ?>
-              
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/miron_recuperacion/controladores/sanciones/buscar.php?sanciones=<?= $_POST['san_nombre'] ?>" class="btn btn-info">Volver al formulario</a>
+                <a href="/miron_recuperacion/controladores/of_encargado/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

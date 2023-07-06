@@ -1,10 +1,10 @@
 <?php
-require '../../modelos/sanciones.php';
+require '../../modelos/aplicaciones.php';
     try {
       
-        $sanciones = new sanciones($_GET);
+        $aplicaciones = new aplicaciones($_GET);
         
-        $app = $sanciones->buscar();
+        $app = $aplicaciones->buscar();
         //var_dump($app);
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -14,14 +14,14 @@ require '../../modelos/sanciones.php';
 ?>
 <?php include_once '../../includes/header.php'?>
     <div class="container">
-        <h1 class="text-center">Modificar sanciones</h1>
+        <h1 class="text-center">Modificar aplicaciones</h1>
         <div class="row justify-content-center">
-            <form action="/miron_recuperacion/controladores/sanciones/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
-                <input type="hidden" name="app_id" value="<?= $app[0]['APP_ID'] ?>" >
+            <form action="/miron_recuperacion/controladores/aplicaciones/modificar.php" method="POST" class="col-lg-8 border bg-light p-3">
+                <input type="hidden" name="san_id" value="<?= $app[0]['SAN_ID'] ?>" >
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="gra_nombre">Nombre de la sanciones</label>
-                        <input type="text" name="app_nombre" id="app_nombre" value="<?= $app[0]['APP_NOMBRE'] ?>" class="form-control" required>
+                        <label for="gra_nombre">Nombre de la aplicaciones</label>
+                        <input type="text" name="san_nombre" id="san_nombre" value="<?= $app[0]['SAN_NOMBRE'] ?>" class="form-control" required>
                     </div>
                 </div>
                 

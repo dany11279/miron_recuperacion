@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Buscar sancioneses</title>
+    <title>Buscar aplicacioneses</title>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Buscar sancioneses</h1>
+        <h1 class="text-center">Buscar aplicacioneses</h1>
         <div class="row justify-content-center">
-            <form action="/miron_recuperacion/controladores/sanciones/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
+            <form action="/miron_recuperacion/controladores/aplicaciones/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="mb-3">
-                    <label for="app_nombre" class="form-label">Nombre de la sanciones</label>
-                    <input type="text" name="app_nombre" id="app_nombre" class="form-control">
+                    <label for="app_nombre" class="form-label">Nombre de la aplicaciones</label>
+                    <input type="text" name="san_nombre" id="san_nombre" class="form-control">
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-info w-100">Buscar</button>

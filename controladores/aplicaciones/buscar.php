@@ -1,11 +1,13 @@
 <?php
-require '../../modelos/problemas_reportados.php';
+require '../../modelos/aplicaciones.php';
 try {
   
-    $problemas_reportados = new problemas_reportados($_GET);
+    $aplicaciones = new aplicaciones($_GET);
+    // var_dump($grado);
+    // exit;
+    
+    $aplicaciones = $aplicaciones->buscar();
  
-    $problemas_reportados = $Problemas_reportados->buscar();
-
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){
@@ -30,23 +32,19 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO. </th>
-                            <th>aplicaciones</th>
-                            <th>PROBLEMAS reportados</th>
-                            <th>DESCRIPCIÓN</th>
+                            <th>SANCION</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(count($problemas_reportados) > 0):?>
-                        <?php foreach($problemas_reportados as $key => $pro) : ?>
+                        <?php if(count($aplicaciones) > 0):?>
+                        <?php foreach($aplicaciones as $key => $app) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $tar['SAN_NOMBRE'] ?></td>
-                            <td><?= $tar['PRO_DESCRIPCION'] ?></td>
-                            <td><?= $tar['PRO_FECHA'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/miron_recuperacion/vistas/problemas_reportados/modificar.php?pro_id=<?= $tar['PRO_ID']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/miron_recuperacion/controladores/problemas_reportados/eliminar.php?pro_id=<?= $tar['PRO_ID']?>">Eliminar</a></td>
+                            <td><?= $app['SAN_NOMBRE'] ?></td>
+                            <td><a class="btn btn-warning w-100" href="/miron_recuperacion/vistas/aplicacioneses/modificar.php?san_id=<?= $app['SAN_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/miron_recuperacion/controladores/aplicaciones/eliminar.php?san_id=<?= $app['SAN_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>
@@ -60,7 +58,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/miron_recuperacion/vistas/problemas_reportados/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                <a href="/miron_recuperacion/vistas/aplicaciones/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
             </div>
         </div>
     </div>

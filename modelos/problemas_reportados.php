@@ -24,7 +24,7 @@ class problemas_reportados extends Conexion {
     }
 
     public function buscar() {
-        $sql = "select pro_id, app_nombre, pro_descripcion, pro_fecha from problemas_reportados inner join sancioneses on pro_app = app_id ";
+        $sql = "select pro_id, app_nombre, pro_descripcion, pro_fecha from problemas_reportados inner join aplicacioneses on pro_app = app_id ";
 
         if ($this->pro_id != null) {
             $sql .= " AND pro_id = $this->pro_id";

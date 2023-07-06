@@ -1,14 +1,14 @@
 <?php
-require '../../modelos/sanciones.php';
+require '../../modelos/aplicaciones.php';
 
 
-if($_POST['app_nombre'] != '' ){
+if($_POST['san_nombre'] != '' ){
 
 
     try {
-        $sanciones = new sanciones($_POST);
-//        var_dump($sanciones);
-        $resultado = $sanciones->guardar();
+        $aplicaciones = new aplicaciones($_POST);
+//        var_dump($aplicaciones);
+        $resultado = $aplicaciones->guardar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();

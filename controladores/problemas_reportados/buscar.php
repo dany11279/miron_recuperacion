@@ -2,7 +2,7 @@
 require '../../modelos/problemas_reportados.php';
 try {
   
-    $problemas_encontrados = new problemas_reportados($_GET);
+    $problemas_reportados = new problemas_reportados($_GET);
  
     $problemas_reportados = $problemas_reportados->buscar();
 //var_dump($problemas_reportados);
@@ -31,8 +31,8 @@ try {
                         <tr>
                             <th>NO. </th>
                             <th>SANCION</th>
-                            <th>PROBLEMA ENCONTRADO</th>
-                            <th>PROBLEMA ENCONTRADO</th>
+                            <th>PROBLEMA REPORTADOS</th>
+                            <th>PROBLEMA REPORTADOS</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>
@@ -45,8 +45,8 @@ try {
                             <td><?= $tar['SAN_NOMBRE'] ?></td>
                             <td><?= $tar['PRO_DESCRIPCION'] ?></td>
                             <td><?= $tar['PRO_FECHA'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/miron_recuperacion/vistas/problemas_problemas_encontrados/modificar.php?pro_id=<?= $tar['PRO_ID']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/miron_recuperacion/controladores/problemas_problemas_encontrados/eliminar.php?pro_id=<?= $tar['PRO_ID']?>">Eliminar</a></td>
+                            <td><a class="btn btn-warning w-100" href="/miron_recuperacion/vistas/problemas_reportados/modificar.php?pro_id=<?= $tar['PRO_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/miron_recuperacion/controladores/problemas_reportados/eliminar.php?pro_id=<?= $tar['PRO_ID']?>">Eliminar</a></td>
                         </tr>
                         <?php endforeach ?>
                         <?php else :?>

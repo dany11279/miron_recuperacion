@@ -34,14 +34,14 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    sanciones
+                    aplicaciones
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/sanciones/index.php">Crear sancion</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/aplicaciones/index.php">Crear sancion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/sanciones/buscar.php">Buscar sancion</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/aplicaciones/buscar.php">Buscar sancion</a>
                         </li>
                     </ul>
                 </li>
@@ -60,7 +60,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Asignar app
+                        Asignar sancion
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
@@ -73,14 +73,14 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                        Detalle app
+                        Detalle sancion
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/index.php">Registro de sanciones </a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/index.php">Registro de aplicaciones </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/buscar.php">Buscar detalles sanciones</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/buscar.php">Buscar detalles aplicaciones</a>
                         </li>
                     </ul>
                 </li>

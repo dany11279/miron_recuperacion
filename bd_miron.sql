@@ -21,10 +21,10 @@ asig_ofencargado int not null,
 asig_san int not null,
 asig_sit char (1) DEFAULT '1',
 foreign key (asig_ofencargado) REFERENCES of_encargado (of_id),
-foreign key (asig_san) REFERENCES sanciones (san_id)
+foreign key (asig_san) REFERENCES aplicaciones (san_id)
 );
 
-Create table sanciones (
+Create table aplicaciones (
 san_id serial not null primary key,
 san_nombre varchar (50) not null,
 san_estado char (1) DEFAULT '1'
@@ -36,5 +36,5 @@ pro_san int not null,
 pro_descripcion varchar (50) not null,
 pro_fecha date not null,
 pro_estado char (1) DEFAULT '1',
-foreign key (pro_san) REFERENCES sanciones (san_id)
+foreign key (pro_san) REFERENCES aplicaciones (san_id)
 );

@@ -1,7 +1,7 @@
 <?php
 require_once 'Conexion.php';
 
-class sanciones extends Conexion{
+class aplicaciones extends Conexion{
     public $san_id;
     public $san_nombre;
     public $san_estado;
@@ -15,13 +15,13 @@ class sanciones extends Conexion{
     }
 
     public function guardar(){
-        $sql = "INSERT INTO sanciones(san_nombre, san_estado) VALUES ('$this->san_nombre','$this->san_estado')";
+        $sql = "INSERT INTO aplicaciones(san_nombre, san_estado) VALUES ('$this->san_nombre','$this->san_estado')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
 
     public function buscar(){
-        $sql = "SELECT * FROM sanciones WHERE san_estado = 1";
+        $sql = "SELECT * FROM aplicaciones WHERE san_estado = 1";
 
         if($this->san_nombre != ''){
             $sql .= " AND san_nombre LIKE '%$this->san_nombre%'";
@@ -41,7 +41,7 @@ class sanciones extends Conexion{
 
 
     public function buscart(){
-        $sql = "SELECT * FROM sanciones WHERE san_estado in (1,2,3,4,5)";
+        $sql = "SELECT * FROM aplicaciones WHERE san_estado in (1,2,3,4,5)";
 
         if($this->san_nombre != ''){
             $sql .= " AND san_nombre LIKE '%$this->san_nombre%'";
@@ -56,7 +56,7 @@ class sanciones extends Conexion{
     }
 
     public function buscarsan(){
-        $sql = "SELECT * FROM sanciones WHERE san_estado in (1,2,3,4,5) AND san_id = $this->san_id";
+        $sql = "SELECT * FROM aplicaciones WHERE san_estado in (1,2,3,4,5) AND san_id = $this->san_id";
 
 
 
@@ -69,7 +69,7 @@ class sanciones extends Conexion{
 
 
     public function modificar(){
-        $sql = "UPDATE sanciones SET san_nombre = '$this->san_nombre', san_estado = '$this->san_estado' WHERE san_id = $this->san_id";
+        $sql = "UPDATE aplicaciones SET san_nombre = '$this->san_nombre', san_estado = '$this->san_estado' WHERE san_id = $this->san_id";
         
         $resultado = self::ejecutar($sql);
         return $resultado;
@@ -79,14 +79,14 @@ class sanciones extends Conexion{
 
     
     public function modificar2(){
-        $sql = "UPDATE sanciones SET  san_estado = '$this->san_estado' WHERE san_id = $this->san_id";
+        $sql = "UPDATE aplicaciones SET  san_estado = '$this->san_estado' WHERE san_id = $this->san_id";
         
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
 
     public function eliminar(){
-        $sql = "DELETE FROM sanciones WHERE san_id = $this->san_id";
+        $sql = "DELETE FROM aplicaciones WHERE san_id = $this->san_id";
         
         $resultado = self::ejecutar($sql);
         return $resultado;

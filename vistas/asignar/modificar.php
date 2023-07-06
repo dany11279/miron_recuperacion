@@ -1,6 +1,6 @@
 <?php
 require '../../modelos/problemas_reportados.php';
-require '../../modelos/sanciones.php';
+require '../../modelos/aplicaciones.php';
 
 try {
     $problemas_reportados = new problemas_reportados($_GET);
@@ -14,10 +14,10 @@ try {
 
 try {
       
-    $app = new sanciones($_GET);
+    $app = new aplicaciones($_GET);
     
-    $sanciones = $app->buscar();
-   //var_dump($sanciones);
+    $aplicaciones = $app->buscar();
+   //var_dump($aplicaciones);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){
@@ -33,9 +33,9 @@ try {
             <input type="hidden" name="pro_id" id="pro_id" value="<?= $problemas_reportados[0]['PRO_ID'] ?>">
             <div class="row mb-3">
                 <div class="col">
-                    <label for="sanciones">Sancion</label>
+                    <label for="aplicaciones">Sancion</label>
                     <select name="pro_app" id="pro_san" class="form-select" required>
-                        <?php foreach ($sanciones as $app) : ?>
+                        <?php foreach ($aplicaciones as $app) : ?>
                             <option value="<?= $app['SAN_ID'] ?>" <?= ($app['SAN_NOMBRE'] === $problemas_reportados[0]['SAN_NOMBRE']) ? 'selected' : '' ?>><?= $app['SAN_NOMBRE'] ?></option>
                         <?php endforeach; ?>
                     </select>

@@ -5,11 +5,11 @@ require '../../modelos/problemas_reportados.php';
 if ($_POST != '') {
     try {
     
-        $fechaPost = $_POST['tar_fecha'];
+        $fechaPost = $_POST['pro_fecha'];
         $fechaObjeto = date_create($fechaPost);
         $fechaFormateada = date_format($fechaObjeto, 'd/m/Y'); 
         $datosproblemas_reportados = $_POST;
-        $datosproblemas_reportados['tar_fecha'] = $fechaFormateada;
+        $datosproblemas_reportados['pro_fecha'] = $fechaFormateada;
         $problemas_reportados = new problemas_reportados($datosproblemas_reportados);
 // var_dump($problemas_reportados);
 // exit;
