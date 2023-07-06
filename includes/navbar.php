@@ -67,7 +67,7 @@
                             <a class="nav-link" href="/miron_recuperacion/vistas/asignar/index.php"> Asignar sancion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/asignar/buscar.php">Buscar asignaciones</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/asignar/buscar.php">Buscar sancion</a>
                         </li>
                     </ul>
                 </li>
