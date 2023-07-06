@@ -6,7 +6,7 @@
             <form action="/miron_recuperacion/controladores/problemas_reportados/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="gra_nombre">Ingrese los problemasreportados</label>
+                        <label for="gra_nombre">Ingrese los ploblemas</label>
                         <input type="text" name="pro_nombre" id="gra_nombre" class="form-control" >
                     </div>
                 </div>

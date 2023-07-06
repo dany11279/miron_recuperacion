@@ -2,7 +2,14 @@
 require '../../modelos/Asignar.php';
 require '../../modelos/of_encargado.php';
 
+
 //var_dump($_POST);
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$resultado = false;
+$error = "";
 
 if (!empty($_POST['asig_san'])) {
     try {
@@ -10,7 +17,9 @@ if (!empty($_POST['asig_san'])) {
         //var_dump($Asig);
 
         $resultado = $Asig->guardar();
-        $error = "NO se guardó correctamente";
+        if (!$resultado) {
+            $error = "NO se guardó correctamente";
+        }
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2) {
@@ -20,10 +29,12 @@ if (!empty($_POST['asig_san'])) {
     try {
         $san = new of_encargado();
         $san->san_id = $_POST['asig_san'];
-        $san->san_estado= 2;
+        $san->san_estado = 2;
      
-        $resultado = $san->modificar2();
-        $error = "NO se guardó correctamente";
+        $resultado = $san->modificar();
+        if (!$resultado) {
+            $error = "NO se guardó correctamente";
+        }
     } catch (PDOException $e) {
         $error = $e->getMessage();
     } catch (Exception $e2) {
@@ -32,9 +43,8 @@ if (!empty($_POST['asig_san'])) {
 } else {
     $error = "Debe llenar todos los datos";
 }
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -22,7 +22,7 @@ try {
 
 // Obtener el nombre del programador
 try {
-    $asig_san = $_REQUEST['pro_id'] ?? null;
+    $asig_san = $_REQUEST['of_id'] ?? null;
     $nombre = new Asignar(['asig_san' => $asig_san]);
 
     $nombres = $nombre->buscarnom();
@@ -35,7 +35,7 @@ try {
 
 // Obtener los problemas reportados 
 try {
-    $pro_san = $_REQUEST['pro_id'] ?? null;
+    $pro_san = $_REQUEST['of_id'] ?? null;
     $proea = new problemas_reportados(['pro_san' => $pro_san]);
     $proe = $proea->buscarpro();
 
@@ -137,3 +137,8 @@ try {
 
     <?php include_once '../../includes/footer.php' ?>
 </body>
+
+
+
+
+

@@ -5,11 +5,11 @@
 require '../../modelos/aplicaciones.php';
 try {
   
-    $problemas_reporgtados = new aplicaciones($_GET);
+    $problemas_reportados = new aplicaciones($_GET);
  
     
-    $problemas_reporgtados = $problemas_reporgtados->buscarT();
-//var_dump($problemas_problemas_encontrados);
+    $problemas_reportados = $problemas_reportados->buscarT();
+//var_dump($problemas_encontrados);
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){
@@ -40,13 +40,13 @@ try {
                         </tr>
                     </thead>
                     <tbody>
-    <?php if (count($problemas_encontrados) > 0) : ?>
-        <?php foreach ($problemas_encontrados as $key => $tar) : ?>
+    <?php if (count($problemas_reportados) > 0) : ?>
+        <?php foreach ($problemas_reportados as $key => $problemas_reportados) : ?>
             <tr>
                 <td><?= $key + 1 ?></td>
-                <td><?= $tar['SAN_NOMBRE'] ?></td>
+                <td><?= $problemas_reportados['SAN_NOMBRE'] ?></td>
                 <td>
-                    <?php if ($tar['SAN_ESTADO'] == 2) { ?>
+                    <?php if ($problemas_reportados['SAN_ESTADO'] == 2) { ?>
                         <a class="btn btn-warning w-75%" href="/miron_recuperacion/vistas/detalle/buscar.php?pro_id=<?= $tar['SAN_ID'] ?>"> ver</a>
                     <?php } else { ?>
                         no asignada aún

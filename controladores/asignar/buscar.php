@@ -39,12 +39,12 @@ try {
                     </thead>
                     <tbody>
                         <?php if(count($problemas_reportados) > 0):?>
-                        <?php foreach($problemas_reportados as $key => $pro) : ?>
+                        <?php foreach($problemas_reportados as $key => $problemas_reportados) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $tar['SAN_NOMBRE'] ?></td>
-                            <td><?= $tar['PRO_DESCRIPCION'] ?></td>
-                            <td><?= $tar['PRO_FECHA'] ?></td>
+                            <td><?= $problemas_reportados['SAN_NOMBRE'] ?></td>
+                            <td><?= $problemas_reportados['PRO_DESCRIPCION'] ?></td>
+                            <td><?= $problemas_reportados['PRO_FECHA'] ?></td>
                             <td><a class="btn btn-warning w-100" href="/miron_recuperacion/vistas/problemas_reportados/modificar.php?pro_id=<?= $tar['PRO_ID']?>">Modificar</a></td>
                             <td><a class="btn btn-danger w-100" href="/miron_recuperacion/controladores/problemas_reportados/eliminar.php?pro_id=<?= $tar['PRO_ID']?>">Eliminar</a></td>
                         </tr>
