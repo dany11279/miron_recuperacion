@@ -38,10 +38,10 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/aplicaciones/index.php">Crear sancion</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/aplicaciones/index.php">Crear aplicacion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/aplicaciones/buscar.php">Buscar sancion</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/aplicaciones/buscar.php">Buscar aplicacion</a>
                         </li>
                     </ul>
                 </li>
@@ -60,20 +60,20 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Asignar sancion
+                        Asignar aplicacion
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/asignar/index.php"> Asignar sancion</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/asignar/index.php"> Asignar aplicacion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/asignar/buscar.php">Buscar sancion</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/asignar/buscar.php">Buscar aplicacion</a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                        Detalle sancion
+                        Detalle aplicacion
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">

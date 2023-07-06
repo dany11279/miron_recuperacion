@@ -1,7 +1,7 @@
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
 <div class="container mt-5">
-  <h1 class="text-center mt-3">Formulario para la creación de aplicacioneses</h1>
+  <h1 class="text-center mt-3">Formulario para la creación de aplicaciones</h1>
   <div class="row justify-content-center mt-2">
     <form action="/miron_recuperacion/controladores/aplicaciones/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
       <div class="row mb-3">

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Buscar aplicacioneses</h1>
+        <h1 class="text-center">Buscar aplicacion</h1>
         <div class="row justify-content-center">
             <form action="/miron_recuperacion/controladores/aplicaciones/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="mb-3">

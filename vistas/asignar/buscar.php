@@ -6,7 +6,7 @@
             <form action="/miron_recuperacion/controladores/asignar/buscar.php" method="GET" class="col-lg-8 border bg-light p-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="gra_nombre">Nombre de la sancion</label>
+                        <label for="gra_nombre">Nombre de la aplicacion</label>
                         <input type="text" name="tar_nombre" id="gra_nombre" class="form-control" >
                     </div>
                 </div>

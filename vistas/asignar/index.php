@@ -37,9 +37,9 @@ try {
   <div class="row justify-content-center mt-2">
     <form action="/miron_recuperacion/controladores/asignar/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
       <div class="form-group">
-        <label for="aplicaciones">Seleccione una sancion:</label>
+        <label for="aplicaciones">Seleccione una aplicacion:</label>
         <select class="form-select" name="asig_san" id="asig_san" required>
-          <option value="">Seleccionar sancion</option>
+          <option value="">Seleccionar aplicacion</option>
           <?php foreach ($aplicaciones as $apps) { ?>
             <option value="<?php echo $apps['SAN_ID']; ?>"><?php echo $apps['SAN_NOMBRE']; ?></option>
           

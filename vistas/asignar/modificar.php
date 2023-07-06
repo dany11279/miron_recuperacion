@@ -33,7 +33,7 @@ try {
             <input type="hidden" name="pro_id" id="pro_id" value="<?= $problemas_reportados[0]['PRO_ID'] ?>">
             <div class="row mb-3">
                 <div class="col">
-                    <label for="aplicaciones">Sancion</label>
+                    <label for="aplicaciones">aplicacion</label>
                     <select name="pro_app" id="pro_san" class="form-select" required>
                         <?php foreach ($aplicaciones as $app) : ?>
                             <option value="<?= $app['SAN_ID'] ?>" <?= ($app['SAN_NOMBRE'] === $problemas_reportados[0]['SAN_NOMBRE']) ? 'selected' : '' ?>><?= $app['SAN_NOMBRE'] ?></option>

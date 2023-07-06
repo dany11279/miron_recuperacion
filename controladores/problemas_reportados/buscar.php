@@ -30,7 +30,7 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO. </th>
-                            <th>SANCION</th>
+                            <th>aplicacion</th>
                             <th>PROBLEMA REPORTADOS</th>
                             <th>PROBLEMA REPORTADOS</th>
                             <th>MODIFICAR</th>

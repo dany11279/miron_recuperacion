@@ -1,6 +1,6 @@
 <?php
 require '../../modelos/problemas_reportados.php';
-require '../../modelos/sancion.php';
+require '../../modelos/aplicaciones.php';
 //var_dump($_REQUEST);    
 
 try {

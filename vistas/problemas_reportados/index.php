@@ -20,9 +20,9 @@ require '../../modelos/aplicaciones.php';
   <div class="row justify-content-center mt-2">
     <form action="/miron_recuperacion/controladores/problemas_reportados/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
       <div class="form-group">
-        <label for="aplicaciones">Seleccione una sancion:</label>
+        <label for="aplicaciones">Seleccione una aplicacion:</label>
         <select class="form-select" name="pro_app" id="tar_app" required>
-          <option value="">Seleccionar sancio</option>
+          <option value="">Seleccionar aplicacion</option>
           <?php foreach ($aplicaciones as $apps) { ?>
             <option value="<?php echo $apps['SAN_ID']; ?>"><?php echo $apps['SAN_NOMBRE']; ?></option>
           <?php } ?>
@@ -30,9 +30,9 @@ require '../../modelos/aplicaciones.php';
       </div>
  
       <div class="form-group">
-        <label for="descripcion">Descripción de la problemas reportados:</label>
-        <texproblemas_reportados class="form-control" name="pro_descripcion" id="pro_descripcion" rows="4"></texproblemas_reportados>
-      </div>
+      <label for="pro_descripcion">Descripción de los problemas reportados:</label>
+<textarea class="form-control" name="pro_descripcion" id="pro_descripcion" rows="4"></textarea>
+
       <div class="form-group">
         <label for="fecha">Fecha de asignacion</label>
         <input type="date" class="form-control" name="tar_fecha" id="tar_fecha" required>

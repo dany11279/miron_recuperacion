@@ -61,11 +61,11 @@ try {
 
 <body>
     <div class="container border bg-light py-4 mt-4">
-        <h1 class="mt-4">Detalle de Sancion</h1>
+        <h1 class="mt-4">Detalle de aplicacion</h1>
 
         <div class="row mt-4">
             <div class="col">
-                <h5>Nombre de Sancion:</h5>
+                <h5>Nombre de aplicacion:</h5>
                 <input type="text" class="form-control" value="<?= $sans[0]['SAN_NOMBRE'] ?>" readonly>
             </div>
             <div class="col">

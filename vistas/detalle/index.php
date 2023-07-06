@@ -2,10 +2,10 @@
 <?php include_once '../../includes/navbar.php'?>
 <?php
 
-require '../../modelos/sancion.php';
+require '../../modelos/aplicaciones.php';
 try {
   
-    $problemas_reporgtados = new sancion($_GET);
+    $problemas_reporgtados = new aplicaciones($_GET);
  
     
     $problemas_reporgtados = $problemas_reporgtados->buscarT();
@@ -34,14 +34,14 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO. </th>
-                            <th>SANCION</th>
+                            <th>aplicaciones</th>
                             <th>VER</th>
                           
                         </tr>
                     </thead>
                     <tbody>
-    <?php if (count($problemas_problemas_encontrados) > 0) : ?>
-        <?php foreach ($problemas_problemas_encontrados as $key => $tar) : ?>
+    <?php if (count($problemas_encontrados) > 0) : ?>
+        <?php foreach ($problemas_encontrados as $key => $tar) : ?>
             <tr>
                 <td><?= $key + 1 ?></td>
                 <td><?= $tar['SAN_NOMBRE'] ?></td>

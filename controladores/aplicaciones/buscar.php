@@ -32,7 +32,7 @@ try {
                     <thead class="table-dark">
                         <tr>
                             <th>NO. </th>
-                            <th>SANCION</th>
+                            <th>aplicacion</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>
                         </tr>

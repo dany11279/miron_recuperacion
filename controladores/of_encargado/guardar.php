@@ -8,7 +8,7 @@ if ($_POST != '') {
         $prog = new of_encargado($_POST);
 
 
-        $resultado = $encargados->guardar();
+        $resultado = $prog->guardar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();
