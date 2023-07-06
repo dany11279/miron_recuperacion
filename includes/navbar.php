@@ -77,10 +77,10 @@
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/index.php">Registro de detalle </a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/index.php">Registro de sanciones </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/buscar.php">Buscar detalles apps</a>
+                            <a class="nav-link" href="/miron_recuperacion/vistas/detalle/buscar.php">Buscar detalles sanciones</a>
                         </li>
                     </ul>
                 </li>
