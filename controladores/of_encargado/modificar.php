@@ -5,9 +5,9 @@ require '../../modelos/of_encargado.php';
 if ($_POST != '') {
     try {
      
-        $encargados = new of_encargado($_POST);
+        $of_encargado = new of_encargado($_POST);
 
-        $resultado = $encargados->modificar();
+        $resultado = $of_encargado->modificar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();
@@ -46,7 +46,7 @@ if ($_POST != '') {
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/miron_recuperacion/controladores/0f_encargado/buscar.php" class="btn btn-info">Volver al formulario</a>
+                <a href="/miron_recuperacion/controladores/of_encargado/buscar.php" class="btn btn-info">Volver al formulario</a>
             </div>
         </div>
     </div>

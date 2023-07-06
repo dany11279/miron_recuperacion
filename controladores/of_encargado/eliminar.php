@@ -2,8 +2,8 @@
 require '../../modelos/of_encargado.php';
 
 try {
-    $grado = new of_encargado($_GET);
-    $resultado = $grado->eliminar();
+    $of_encargado = new of_encargado($_GET);
+    $resultado = $of_encargado->eliminar();
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){

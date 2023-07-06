@@ -5,10 +5,10 @@ require '../../modelos/of_encargado.php';
 if ($_POST != '') {
     try {
     
-        $prog = new of_encargado($_POST);
+        $of_encargado = new of_encargado($_POST);
 
 
-        $resultado = $prog->guardar();
+        $resultado = $of_encargado->guardar();
         $error = "NO se guardó correctamente";
     } catch (PDOException $e) {
         $error = $e->getMessage();

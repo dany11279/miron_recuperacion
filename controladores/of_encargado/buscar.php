@@ -2,10 +2,10 @@
 require '../../modelos/of_encargado.php';
 try {
   
-    $progra = new of_encargado($_GET);
+    $of_encargado = new of_encargado($_GET);
  
     
-    $progras = $progra->buscar();
+    $of_encargado = $of_encargado->buscar();
 
 } catch (PDOException $e) {
     $error = $e->getMessage();
@@ -38,16 +38,16 @@ try {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(count($encargados) > 0):?>
-                        <?php foreach($encargados as $key => $tar) : ?>
+                        <?php if(count($of_encargado) > 0):?>
+                        <?php foreach($of_encargado as $key => $of_encargado) : ?>
                         <tr>
                             <td><?= $key + 1 ?></td>
-                            <td><?= $tar['NOMBRE'] ?></td>
-                            <td><?= $tar['PROG_CORREO'] ?></td>
-                            <td><a class="btn btn-warning w-100" href="/recuperacion_miron/vistas/of_encargado/modificar.php?of_id=<?= $tar['OF_ID']?>">Modificar</a></td>
-                            <td><a class="btn btn-danger w-100" href="/recuperacion_miron/controladores/of_encargadoes/eliminar.php?of_id=<?= $tar['OF_ID']?>">Eliminar</a></td>
+                            <td><?= $of_encargado['OF_NOMBRES'] ?></td>
+                            <td><?= $of_encargado['OF_CORREO'] ?></td>
+                            <td><a class="btn btn-warning w-100" href="/miron_recuperacion/vistas/of_encargado/modificar.php?of_id=<?= $tar['OF_ID']?>">Modificar</a></td>
+                            <td><a class="btn btn-danger w-100" href="/miron_recuperacion/controladores/of_encargado/eliminar.php?of_id=<?= $tar['OF_ID']?>">Eliminar</a></td>
                         </tr>
-                        <?php endforeach ?>
+                        <?php endforeach ?> 
                         <?php else :?>
                             <tr>
                                 <td colspan="3">NO EXISTEN REGISTROS</td>
@@ -59,7 +59,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/recuperacion_miron/vistas/of_encargado/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                <a href="/miron_recuperacion/vistas/of_encargado/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
             </div>
         </div>
     </div>

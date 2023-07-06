@@ -16,7 +16,7 @@ require '../../modelos/aplicaciones.php';
 ?>
 
 <div class="container mt-5">
-  <h1 class="text-center mt-3">ASIGNACIÓN DE PROBLEMAS REPORTADOS</h1>
+  <h1 class="text-center mt-3">PROBLEMAS REPORTADOS</h1>
   <div class="row justify-content-center mt-2">
     <form action="/miron_recuperacion/controladores/problemas_reportados/guardar.php" method="POST" class="border border-primary rounded p-3 bg-light col-md-6">
       <div class="form-group">

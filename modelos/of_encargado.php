@@ -26,7 +26,7 @@ class of_encargado extends Conexion {
     }
 
     public function buscar() {
-        $sql = "SELECT of_id, of_correo, gra_nombre || ' ' || of_nombres || ' ' || of_apellidos AS nombre
+        $sql = "SELECT of_id, of_correo, gra_nombre || ' ' || of_nombres || ' ' || of_apellidos AS of_nombres
         FROM of_encargado INNER JOIN grados on gra_id= of_grado";
 
         if ($this->of_id != null) {
